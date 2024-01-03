@@ -16,7 +16,7 @@ RP_BUTTONS = [
     [
         Button.url(get_string("bot_3"), "https://github.com/jonesroot/Key-Userbot"),
     ],
-    [Button.url("Support Group", "t.me/kynansupport")],
+    [Button.url("Support Group", "t.me/keysupport1")],
 ]
 
 AYSTRING = """🎇 **Thanks for Deploying Key-Userbot**
