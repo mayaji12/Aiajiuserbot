@@ -33,7 +33,7 @@ IN_BTTS = [
             "Repository",
             url="https://github.com/jonesroot/Key-Userbot",
         ),
-        Button.url("Support", url="https://t.me/kynansupport"),
+        Button.url("Support", url="https://t.me/keysupport1"),
     ]
 ]
 
