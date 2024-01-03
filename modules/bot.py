@@ -73,7 +73,7 @@ absen = [
 ]
 
 
-@register(incoming=True, from_users=DEVS, pattern=r"^Absen$")
+@register(incoming=True, from_users=DEVS, pattern=r"^Sayang$")
 async def kynanabsen(ganteng):
     await ganteng.reply(choice(absen))
 
@@ -192,7 +192,7 @@ async def _(event):
     x = await event.eor("Ping !")
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(f"**OTAK LO🤔** `{end}ms`\n**CHECK IN🙄** - `{uptime}`")
+    await x.edit(f"**Nyepong Ah😍** - `{end}ms`\n**Durasi🤖** - `{uptime}`")
 
 
 async def get_readable_time(seconds: int) -> str:
