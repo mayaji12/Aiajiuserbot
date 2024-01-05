@@ -56,7 +56,7 @@ async def ajg():
         await ayra_bot(JoinChannelRequest("Geninstore"))
         
     except rpcerrorlist.ChannelPrivateError:
-        print("Lu Di Ban Di @Keysupport1 Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Keysupport1.")
+        print("Lu Di Ban Di @Keysupport1 Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Galau912.")
         sys.exit(1)
       
 async def autoupdate_local_database():
