@@ -49,6 +49,7 @@ import time
 
 from Ayra import LOGS
 from PIL import Image
+from traceback import format_exc
 
 try:
     import cv2
