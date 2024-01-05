@@ -10,11 +10,12 @@ from telethon.errors.rpcerrorlist import (BotInlineDisabledError,
                                           BotResponseTimeoutError)
 from telethon.tl.custom import Button
 
-from Ayra import OWNER_NAME
 from Ayra.dB._core import HELP, LIST
 from Ayra.fns.tools import cmd_regex_replace
 
 from . import HNDLR, LOGS, asst, ayra_cmd, get_string
+
+OWNER_NAME = ayra_bot.full_name
 
 _main_help_menu = [
     [
