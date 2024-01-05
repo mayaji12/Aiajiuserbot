@@ -1,5 +1,7 @@
 FROM python:3.10
 
+COPY . .
+
 COPY installer.sh .
 
 RUN bash installer.sh
