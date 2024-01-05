@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import (BotInlineDisabledError,
                                           BotMethodInvalidError,
                                           BotResponseTimeoutError)
 from telethon.tl.custom import Button
-
+from Ayra import OWNER_NAME
 from . import HNDLR, LOGS, asst, ayra_cmd, get_string
 
 _main_help_menu = [
