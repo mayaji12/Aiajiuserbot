@@ -21,6 +21,16 @@ from Ayra.dB import DEVS, DEFAULT
 from Ayra._misc._supporter import CMD_HNDLR, CMD_LIST
 
 
+pattern = args.get("pattern")
+disable_edited = args.get("disable_edited", False)
+ignore_unsafe = args.get("ignore_unsafe", False)
+unsafe_pattern = r"^[^/!#@\$A-Za-z]"
+groups_only = args.get("groups_only", False)
+trigger_on_fwd = args.get("trigger_on_fwd", False)
+disable_errors = args.get("disable_errors", False)
+insecure = args.get("insecure", False)
+
+
 def kynan_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
