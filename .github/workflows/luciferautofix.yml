@@ -1,4 +1,4 @@
-  name: Auto Fix
+name: Auto Fix
 on: [push]
 jobs:
   python-auto-fix:
@@ -22,5 +22,5 @@ jobs:
       - name: Code Analysis
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Fixing Pylint By Luci"
+          commit_message: "Auto Fix"
           commit_options: "--no-verify"
