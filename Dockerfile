@@ -1,13 +1,11 @@
 FROM python:3.10
 
-COPY . .
-
-# COPY installer.sh .
+COPY installer.sh .
 
 RUN bash installer.sh
 
 # changing workdir
-WORKDIR /root/Key-Userbot
+WORKDIR "/root/KojiraReyyAnata"
 
 # start the bot.
-CMD bash start.sh
+CMD ["bash", "start.sh"]
