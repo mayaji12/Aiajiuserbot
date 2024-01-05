@@ -91,7 +91,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 res = [
                     await event.builder.article(
                         title="ᴀʏʀᴀ ꭙ ᴜꜱᴇʀʙᴏᴛ​",
-                        url="https://t.me/kynansupport​",
+                        url="https://t.me/keysupport1​",
                         description="© Key",
                         text=MSG,
                         thumb=InputWebDocument(
