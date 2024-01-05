@@ -21,6 +21,8 @@ from Ayra.dB import DEVS, DEFAULT
 from Ayra._misc._supporter import CMD_HNDLR, CMD_LIST
 
 
+args = {}
+
 pattern = args.get("pattern")
 disable_edited = args.get("disable_edited", False)
 ignore_unsafe = args.get("ignore_unsafe", False)
