@@ -63,7 +63,9 @@ async def _callback_check(event):
 
 
 async def get_update_linked_chat(event):
-    if _ayra_cache.get("LINKED_CHATS") and _ayra_cache["LINKED_CHATS"].get(event.chat_id):
+    if _ayra_cache.get("LINKED_CHATS") and _ayra_cache["LINKED_CHATS"].get(
+        event.chat_id
+    ):
         _ignore = _ayra_cache["LINKED_CHATS"][event.chat_id]["linked_chat"]
     else:
         channel = await event.client(
@@ -71,7 +73,9 @@ async def get_update_linked_chat(event):
         )
         _ignore = channel.full_chat.linked_chat_id
         if _ayra_cache.get("LINKED_CHATS"):
-            _ayra_cache["LINKED_CHATS"].update({event.chat_id: {"linked_chat": _ignore}})
+            _ayra_cache["LINKED_CHATS"].update(
+                {event.chat_id: {"linked_chat": _ignore}}
+            )
         else:
             _ayra_cache.update(
                 {"LINKED_CHATS": {event.chat_id: {"linked_chat": _ignore}}}
@@ -114,7 +118,9 @@ async def admin_check(event, require=None, silent: bool = False):
             perms = await event.client.get_permissions(event.chat_id, user.id)
         except UserNotParticipantError:
             if not silent:
-                await event.reply("Anda harus bergabung dengan obrolan ini terlebih dahulu!")
+                await event.reply(
+                    "Anda harus bergabung dengan obrolan ini terlebih dahulu!"
+                )
             return False
     if not perms.is_admin:
         if not silent:

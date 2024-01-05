@@ -8,7 +8,8 @@
 import os
 import platform
 import sys
-from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
+from logging import (INFO, WARNING, FileHandler, StreamHandler, basicConfig,
+                     getLogger)
 
 from .. import run_as_module
 
@@ -73,7 +74,6 @@ if run_as_module:
         handlers=[FileHandler(file), StreamHandler()],
     )
     try:
-
         import coloredlogs
 
         coloredlogs.install(level=None, logger=LOGS, fmt=_LOG_FORMAT)

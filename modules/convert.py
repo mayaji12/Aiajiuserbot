@@ -47,9 +47,9 @@ import os
 import random
 import time
 
-from Ayra import LOGS
 from PIL import Image
-from traceback import format_exc
+
+from Ayra import LOGS
 
 try:
     import cv2

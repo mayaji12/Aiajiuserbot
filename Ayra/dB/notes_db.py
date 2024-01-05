@@ -7,6 +7,7 @@
 
 from .. import udB
 
+
 def get_stuff():
     return udB.get_key("NOTE") or {}
 

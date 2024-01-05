@@ -13,13 +13,12 @@ import sys
 import time
 from traceback import format_exc
 from urllib.parse import unquote
-from urllib.request import urlretrieve
 
 from Ayra import run_as_module
 
 if run_as_module:
     from Ayra.configs import Var
-    
+
 try:
     import aiohttp
 except ImportError:
@@ -28,8 +27,8 @@ except ImportError:
         import requests
     except ImportError:
         requests = None
-        
-        
+
+
 try:
     import heroku3
 except ImportError:
@@ -37,7 +36,8 @@ except ImportError:
 
 try:
     from git import Repo
-    from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
+    from git.exc import (GitCommandError, InvalidGitRepositoryError,
+                         NoSuchPathError)
 except ImportError:
     Repo = None
 
@@ -583,6 +583,7 @@ async def shutdown(ay):
     else:
         sys.exit()
 
+
 """
 async def async_searcher(
     url: str,
@@ -622,4 +623,3 @@ async def async_searcher(
     else:
         raise DependencyMissingError("install 'aiohttp' to use this.")
   """
-        

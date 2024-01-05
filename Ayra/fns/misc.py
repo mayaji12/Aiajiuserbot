@@ -68,9 +68,7 @@ except ImportError:
     BeautifulSoup = None
 
 
-async def randomchannel(
-    tochat, channel, range1, range2, caption=None, client=ayra_bot
-):
+async def randomchannel(tochat, channel, range1, range2, caption=None, client=ayra_bot):
     do = randrange(range1, range2)
     async for x in client.iter_messages(channel, add_offset=do, limit=1):
         caption = caption or x.text

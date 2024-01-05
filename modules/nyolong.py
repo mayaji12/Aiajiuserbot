@@ -14,27 +14,9 @@
 ◉ **Keterangan:** Curi pap timer.
 """
 
-from telethon.errors.rpcerrorlist import ChatForwardsRestrictedError, UserBotError, MediaEmptyError
-from telethon.events import NewMessage
-from telethon.tl.custom import Dialog
-from telethon.tl.functions.channels import (
-    GetAdminedPublicChannelsRequest,
-    InviteToChannelRequest,
-    LeaveChannelRequest,
-)
-from telethon.tl.functions.contacts import GetBlockedRequest
-from telethon.tl.functions.messages import AddChatUserRequest, GetAllStickersRequest
-from telethon.tl.functions.users import GetFullUserRequest
-from telethon.tl.types import (
-    Channel,
-    Chat,
-    InputMediaPoll,
-    Poll,
-    PollAnswer,
-    TLObject,
-    User,
-)
-from telethon.utils import get_peer_id
+from telethon.errors.rpcerrorlist import (ChatForwardsRestrictedError,
+                                          MediaEmptyError)
+
 try:
     import cv2
 except ImportError:
@@ -46,6 +28,7 @@ except ImportError:
     WebShot = None
 
 from . import *
+
 LOG_CHANNEL = udB.get_key("LOG_CHANNEL")
 
 
@@ -100,6 +83,7 @@ async def get_restriced_msg(event):
         if thumb:
             os.remove(thumb)
 
+
 @ayra_cmd(pattern=r"curi(?: |$)(.*)")
 async def pencuri(event):
     dia = await event.get_reply_message()
@@ -107,12 +91,9 @@ async def pencuri(event):
     xx = await event.eor("`...`", time=2)
     if not dia:
         return
-    anjing = dia.text or None
+    dia.text or None
     pap = await event.client.download_media(dia)
     try:
-        await event.client.send_file(
-             botlog,
-             pap,
-             caption="Pap nya...")
+        await event.client.send_file(botlog, pap, caption="Pap nya...")
     except Exception as e:
         print(e)

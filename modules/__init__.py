@@ -24,6 +24,13 @@ from urllib.request import urlretrieve
 import aiofiles
 import aiohttp
 import requests
+from pytgcalls import GroupCallFactory
+from pytgcalls.exceptions import GroupCallNotFoundError
+from requests import get
+from telethon import Button, events
+from telethon.tl import functions, types  # pylint:ignore
+from telethon.utils import get_display_name
+
 from Ayra import *
 from Ayra._misc import owner_and_sudos, sudoers
 from Ayra._misc._assistant import asst_cmd, callback, in_pattern
@@ -40,13 +47,6 @@ from Ayra.fns.ytdl import get_videos_link
 from Ayra.kynan import *
 from Ayra.version import __version__ as AyraVer
 from Ayra.version import ayra_version
-from pytgcalls import GroupCallFactory
-from pytgcalls.exceptions import GroupCallNotFoundError
-from requests import get
-from telethon import Button, events
-from telethon.tl import functions, types  # pylint:ignore
-from telethon.utils import get_display_name
-
 from strings import get_help, get_string
 
 from .database.strg import Storage

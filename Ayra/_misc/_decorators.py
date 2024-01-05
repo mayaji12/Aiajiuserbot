@@ -14,26 +14,25 @@ from pathlib import Path
 from time import gmtime, strftime
 from traceback import format_exc
 
-from strings import get_string
 from telethon import Button
 from telethon import __version__ as telever
 from telethon import events
 from telethon.errors.common import AlreadyInConversationError
-from telethon.errors.rpcerrorlist import (
-    AuthKeyDuplicatedError,
-    BotInlineDisabledError,
-    BotMethodInvalidError,
-    ChatSendInlineForbiddenError,
-    ChatSendMediaForbiddenError,
-    ChatSendStickersForbiddenError,
-    FloodWaitError,
-    MessageDeleteForbiddenError,
-    MessageIdInvalidError,
-    MessageNotModifiedError,
-    UserIsBotError,
-)
+from telethon.errors.rpcerrorlist import (AuthKeyDuplicatedError,
+                                          BotInlineDisabledError,
+                                          BotMethodInvalidError,
+                                          ChatSendInlineForbiddenError,
+                                          ChatSendMediaForbiddenError,
+                                          ChatSendStickersForbiddenError,
+                                          FloodWaitError,
+                                          MessageDeleteForbiddenError,
+                                          MessageIdInvalidError,
+                                          MessageNotModifiedError,
+                                          UserIsBotError)
 from telethon.events import MessageEdited, NewMessage
 from telethon.utils import get_display_name
+
+from strings import get_string
 
 from .. import *
 from .. import _ignore_eval
@@ -64,9 +63,7 @@ def compile_pattern(data, hndlr):
     return re.compile("\\" + hndlr + data)
 
 
-def ayra_cmd(
-    pattern=None, manager=False, ayra_bot=ayra_bot, asst=asst, **kwargs
-):
+def ayra_cmd(pattern=None, manager=False, ayra_bot=ayra_bot, asst=asst, **kwargs):
     owner_only = kwargs.get("owner_only", False)
     groups_only = kwargs.get("groups_only", False)
     admins_only = kwargs.get("admins_only", False)
@@ -135,7 +132,7 @@ def ayra_cmd(
                     ay,
                     get_string("py_d7"),
                 )
-            except (BotInlineDisabledError) as er:
+            except BotInlineDisabledError as er:
                 return await eod(ay, f"`{er}`")
             except (
                 MessageIdInvalidError,

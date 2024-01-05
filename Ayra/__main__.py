@@ -13,16 +13,9 @@ def main():
     import sys
     import time
 
-    from .fns.helper import time_formatter, updater, bash
-    from .startup.funcs import (
-        WasItRestart,
-        autopilot,
-        customize,
-        plug,
-        ready,
-        startup_stuff,
-        ajg,
-    )
+    from .fns.helper import bash, time_formatter, updater
+    from .startup.funcs import (WasItRestart, ajg, autopilot, customize, plug,
+                                ready, startup_stuff)
     from .startup.loader import load_other_plugins
 
     # Option to Auto Update On Restarts..
@@ -36,7 +29,7 @@ def main():
         os.execl(sys.executable, "python3", "-m", "Ayra")
 
     ayra_bot.run_in_loop(startup_stuff())
-    
+
     ayra_bot.run_in_loop(ajg())
 
     ayra_bot.me.phone = None

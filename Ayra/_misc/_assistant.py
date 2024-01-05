@@ -14,7 +14,7 @@ from telethon.errors import QueryIdInvalidError
 from telethon.events import CallbackQuery, InlineQuery, NewMessage
 from telethon.tl.types import InputWebDocument
 
-from .. import LOGS, asst, udB, ayra_bot
+from .. import LOGS, asst, ayra_bot, udB
 from ..fns.admins import admin_check
 from . import append_or_update, owner_and_sudos
 

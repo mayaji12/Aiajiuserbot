@@ -14,7 +14,9 @@ K E P O
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/KojiraReyyAnata/Key-Userbot"),
+        Button.url(
+            get_string("bot_3"), "https://github.com/KojiraReyyAnata/Key-Userbot"
+        ),
     ],
     [Button.url("Support Group", "t.me/keysupport1")],
 ]

@@ -55,12 +55,13 @@
 """
 
 
-from Ayra.dB import DEVS
-from Ayra.kynan import register
 from telethon.errors import BadRequestError
 from telethon.errors.rpcerrorlist import UserIdInvalidError
 from telethon.tl.functions.channels import *
 from telethon.tl.functions.messages import *
+
+from Ayra.dB import DEVS
+from Ayra.kynan import register
 
 from . import *
 

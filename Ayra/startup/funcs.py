@@ -6,8 +6,9 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 import asyncio
-import os, shutil
+import os
 import random
+import shutil
 import time
 from random import randint
 
@@ -16,29 +17,18 @@ try:
 except ImportError:
     timezone = None
 
-from telethon.errors import (
-    ChannelsTooMuchError,
-    ChatAdminRequiredError,
-    MessageIdInvalidError,
-    MessageNotModifiedError,
-    UserNotParticipantError,
-)
+from telethon.errors import (ChannelsTooMuchError, ChatAdminRequiredError,
+                             MessageIdInvalidError, MessageNotModifiedError,
+                             UserNotParticipantError)
 from telethon.tl.custom import Button
-from telethon.tl.functions.channels import (
-    CreateChannelRequest,
-    EditAdminRequest,
-    EditPhotoRequest,
-    InviteToChannelRequest,
-)
-from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.functions.messages import ImportChatInviteRequest
+from telethon.tl.functions.channels import (CreateChannelRequest,
+                                            EditAdminRequest, EditPhotoRequest,
+                                            InviteToChannelRequest,
+                                            JoinChannelRequest)
 from telethon.tl.functions.contacts import UnblockRequest
-from telethon.tl.types import (
-    ChatAdminRights,
-    ChatPhotoEmpty,
-    InputChatUploadedPhoto,
-    InputMessagesFilterDocument,
-)
+from telethon.tl.types import (ChatAdminRights, ChatPhotoEmpty,
+                               InputChatUploadedPhoto,
+                               InputMessagesFilterDocument)
 from telethon.utils import get_peer_id
 
 from .. import LOGS, AyConfig
@@ -46,26 +36,31 @@ from ..fns.helper import download_file, inline_mention, updater
 
 db_url = 0
 
+
 async def ajg():
     import sys
-    from .. import ayra_bot
+
     from telethon.errors import rpcerrorlist
+
+    from .. import ayra_bot
+
     try:
         await ayra_bot(JoinChannelRequest("abcdump02"))
         await ayra_bot(JoinChannelRequest("KeySupport1"))
         await ayra_bot(JoinChannelRequest("Geninstore"))
-        
+
     except rpcerrorlist.ChannelPrivateError:
-        print("Lu Di Ban Di @Keysupport1 Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Galau912.")
+        print(
+            "Lu Di Ban Di @Keysupport1 Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Galau912."
+        )
         sys.exit(1)
-      
+
+
 async def autoupdate_local_database():
-    from .. import asst, udB, ayra_bot, Var
+    from .. import Var, asst, ayra_bot, udB
 
     global db_url
-    db_url = (
-        udB.get_key("TGDB_URL") or Var.TGDB_URL or ayra_bot._cache.get("TGDB_URL")
-    )
+    db_url = udB.get_key("TGDB_URL") or Var.TGDB_URL or ayra_bot._cache.get("TGDB_URL")
     if db_url:
         _split = db_url.split("/")
         _channel = _split[-2]
@@ -147,15 +142,13 @@ async def startup_stuff():
         except AttributeError as er:
             LOGS.debug(er)
         except BaseException:
-            LOGS.critical(
-                "Zona waktu salah"
-            )
+            LOGS.critical("Zona waktu salah")
             os.environ["TZ"] = "UTC"
             time.tzset()
 
 
 async def autobot():
-    from .. import udB, ayra_bot
+    from .. import ayra_bot, udB
 
     if udB.get_key("BOT_TOKEN"):
         return
@@ -223,7 +216,7 @@ async def autobot():
 
 
 async def autopilot():
-    from .. import asst, udB, ayra_bot
+    from .. import asst, ayra_bot, udB
 
     channel = udB.get_key("LOG_CHANNEL")
     new_channel = None
@@ -313,7 +306,9 @@ async def autopilot():
                     "Gagal mempromosikan 'Bot Asisten' di 'Log Channel' karena 'Hak Istimewa Admin'"
                 )
             except BaseException as er:
-                LOGS.info("Terjadi kesalahan saat mempromosikan asisten di Log Channel..")
+                LOGS.info(
+                    "Terjadi kesalahan saat mempromosikan asisten di Log Channel.."
+                )
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo = await download_file(
@@ -321,9 +316,7 @@ async def autopilot():
         )
         ll = await ayra_bot.upload_file(photo)
         try:
-            await ayra_bot(
-                EditPhotoRequest(int(channel), InputChatUploadedPhoto(ll))
-            )
+            await ayra_bot(EditPhotoRequest(int(channel), InputChatUploadedPhoto(ll)))
         except BaseException as er:
             LOGS.exception(er)
         os.remove(photo)
@@ -333,7 +326,7 @@ async def autopilot():
 
 
 async def customize():
-    from .. import asst, udB, ayra_bot
+    from .. import asst, ayra_bot, udB
 
     rem = None
     try:
@@ -437,8 +430,7 @@ async def plug(plugin_channels):
 
 
 async def ready():
-    from .. import asst, udB, ayra_bot
-    from ..fns.tools import async_searcher
+    from .. import asst, ayra_bot, udB
 
     chat_id = udB.get_key("LOG_CHANNEL")
     spam_sent = None
@@ -456,7 +448,9 @@ async def ready():
             try:
                 await ayra_bot.delete_messages(chat_id, int(prev_spam))
             except Exception as E:
-                LOGS.info("Kesalahan saat Menghapus Pesan Pembaruan Sebelumnya :" + str(E))
+                LOGS.info(
+                    "Kesalahan saat Menghapus Pesan Pembaruan Sebelumnya :" + str(E)
+                )
         if await updater():
             BTTS = Button.inline("Pembaruan tersedia", "updtavail")
 
@@ -476,7 +470,8 @@ async def ready():
             LOGS.info(ef)
     if spam_sent and not spam_sent.media:
         udB.set_key("LAST_UPDATE_LOG_SPAM", spam_sent.id)
-    get_ = udB.get_key("OLDANN") or []
+    udB.get_key("OLDANN") or []
+
 
 """
     try:

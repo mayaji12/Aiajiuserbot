@@ -28,8 +28,10 @@ def rem_gblacklist(id):
 def is_gblacklisted(id):
     return id in get_stuff()
 
+
 def black_aja():
     return udB.get_key("GBLACKLISTS") or {}
+
 
 def list_bl(id):
     ok = black_aja()

@@ -17,9 +17,8 @@ from traceback import format_exc
 from telethon import events
 
 from Ayra import ayra_bot
-from Ayra.dB import DEVS, DEFAULT
 from Ayra._misc._supporter import CMD_HNDLR, CMD_LIST
-
+from Ayra.dB import DEFAULT, DEVS
 
 args = {}
 
@@ -62,14 +61,8 @@ def kynan_cmd(pattern=None, command=None, **args):
                 cmd = reg + command
             else:
                 cmd = (
-                    (reg +
-                     pattern).replace(
-                        "$",
-                        "").replace(
-                        "\\",
-                        "").replace(
-                        "^",
-                        ""))
+                    (reg + pattern).replace("$", "").replace("\\", "").replace("^", "")
+                )
             try:
                 CMD_LIST[file_test].append(cmd)
             except BaseException:
@@ -107,13 +100,7 @@ def command(**args):
         try:
             cmd = re.search(reg, pattern)
             try:
-                cmd = cmd.group(1).replace(
-                    "$",
-                    "").replace(
-                    "\\",
-                    "").replace(
-                    "^",
-                    "")
+                cmd = cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
             except BaseException:
                 pass
             try:
@@ -212,7 +199,6 @@ def register(**args):
             except KeyboardInterrupt:
                 pass
             except BaseException:
-
                 # Check if we have to disable it.
                 # If not silence the log spam on the console,
                 # with a dumb except.
@@ -252,8 +238,7 @@ def register(**args):
                         command, stdout=asyncsub.PIPE, stderr=asyncsub.PIPE
                     )
                     stdout, stderr = await process.communicate()
-                    result = str(stdout.decode().strip()) + \
-                        str(stderr.decode().strip())
+                    result = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
                     ftext += result
 

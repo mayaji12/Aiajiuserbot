@@ -15,9 +15,10 @@ def load_addons(plugin_name):
     base_name = plugin_name.split("/")[-1].split("\\")[-1].replace(".py", "")
     if base_name.startswith("__"):
         return
-    from .. import HNDLR, LOGS, asst, udB, ayra_bot
-    from .._misc import _supporter as xxx
     from ayra import fns
+
+    from .. import HNDLR, LOGS, asst, ayra_bot, udB
+    from .._misc import _supporter as xxx
     from .._misc._assistant import asst_cmd, callback, in_pattern
     from .._misc._decorators import ayra_cmd
     from .._misc._supporter import Config, admin_cmd, sudo_cmd
@@ -25,7 +26,7 @@ def load_addons(plugin_name):
     from ..configs import Var
     from ..dB._core import HELP
 
-    name = plugin_name.replace("/", ".").replace("\\", ".").replace(".py","")
+    name = plugin_name.replace("/", ".").replace("\\", ".").replace(".py", "")
     spec = util.spec_from_file_location(name, plugin_name)
     mod = util.module_from_spec(spec)
     mod.LOG_CHANNEL = udB.get_key("LOG_CHANNEL")
@@ -88,5 +89,5 @@ def load_addons(plugin_name):
     else:
         try:
             HELP.update({"Addons": {base_name: doc}})
-        except BaseException as em:
+        except BaseException:
             pass

@@ -17,6 +17,7 @@ from logging import getLogger
 
 LOGS = getLogger("Assistant-Key")
 
+
 class AyConfig:
     lang = "id"
     thumb = "resources/extras/logo.jpg"
@@ -104,7 +105,5 @@ if sys.argv[0] == "-m":
     PMLOG = udB.set_key("PMLOG", "True")
 else:
     print("© Assistant-Key ")
-
-    
 
     ayra_bot = asst = udB = vcClient = None

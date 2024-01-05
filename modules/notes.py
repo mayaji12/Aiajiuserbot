@@ -27,9 +27,10 @@ Kirim ke
 """
 import os
 
-from Ayra.dB.notes_db import *
 from telegraph import upload_file as uf
 from telethon.utils import pack_bot_file_id
+
+from Ayra.dB.notes_db import *
 
 from . import *
 from ._inline import something

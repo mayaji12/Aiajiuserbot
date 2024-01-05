@@ -6,13 +6,12 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 import sys
-import os
 
 from decouple import config
 
 try:
     from dotenv import load_dotenv
-    
+
     load_dotenv()
 except ImportError:
     pass
@@ -37,9 +36,7 @@ class Var:
     REDIS_PASSWORD = (
         sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
     )
-    MONGO_URI = (
-        sys.argv[5] if len(sys.argv) > 5 else config("MONGO_URI", default=None)
-    )
+    MONGO_URI = sys.argv[5] if len(sys.argv) > 5 else config("MONGO_URI", default=None)
     REDISPORT = config("REDISPORT", default=None)
     BOT_TOKEN = config("BOT_TOKEN", default=None)
     LOG_CHANNEL = config("LOG_CHANNEL", default=123, cast=int)
