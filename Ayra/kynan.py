@@ -124,7 +124,7 @@ def command(**args):
 
         if allow_edited_updates:
             ayra_bot.add_event_handler(func, events.MessageEdited(**args))
-        ayra_bot.add_event_handler(func, events.NewMessage(**args))
+            ayra_bot.add_event_handler(func, events.NewMessage(**args))
 
     return decorator
 
