@@ -6,7 +6,7 @@
         "Telethon",
         "Pyrogram"
     ],
-    "repository": "https://github.com/jonesroot/Key-Userbot",
+    "repository": "https://github.com/KojiraReyyAnata/Key-Userbot",
     "success_url": "https://t.me/rizzvbss",
     "stack": "container",
     "env": {

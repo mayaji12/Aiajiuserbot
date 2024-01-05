@@ -7,12 +7,12 @@
 
 <b>A stable pluggable Telegram userbot + Voice & Video Call music bot, based on Telethon and Pyrogram</b>
 
-<a href="https://github.com/jonesroot/Key-Userbot/commits"> <img src="https://img.shields.io/github/last-commit/jonesroot/Key-Userbot?color=red&logo=github&logoColor=blue&style=for-the-badge" /></a>
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/jonesroot/Key-Userbot)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/jonesroot/Key-Userbot/graphs/commit-activity)
-[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/jonesroot/Key-Userbot/dashboard)
-[![GitHub Forks](https://img.shields.io/github/forks/jonesroot/Key-Userbot?&logo=github)](https://github.com/jonesroot/Key-Userbot/fork)
-[![GitHub Stars](https://img.shields.io/github/stars/jonesroot/Key-Userbot?&logo=github)](https://github.com/jonesroot/Key-Userbot/stargazers)
+<a href="https://github.com/KojiraReyyAnata/Key-Userbot/commits"> <img src="https://img.shields.io/github/last-commit/KojiraReyyAnata/Key-Userbot?color=red&logo=github&logoColor=blue&style=for-the-badge" /></a>
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/KojiraReyyAnata/Key-Userbot)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/KojiraReyyAnata/Key-Userbot/graphs/commit-activity)
+[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/KojiraReyyAnata/Key-Userbot/dashboard)
+[![GitHub Forks](https://img.shields.io/github/forks/KojiraReyyAnata/Key-Userbot?&logo=github)](https://github.com/KojiraReyyAnata/Key-Userbot/fork)
+[![GitHub Stars](https://img.shields.io/github/stars/KojiraReyyAnata/Key-Userbot?&logo=github)](https://github.com/KojiraReyyAnata/Key-Userbot/stargazers)
 ----
 
 ## Disclaimer
@@ -51,7 +51,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 <summary><b>🔗 Deploy di VPS</b></summary>
 <br>
 
- • `git clone https://github.com/jonesroot/Key-Userbot`
+ • `git clone https://github.com/KojiraReyyAnata/Key-Userbot`
 
  • `cd Key-Userbot`
 
@@ -74,7 +74,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 <summary><b>🔗 Deploy Via Docker</b></summary>
 <br>
 
- • `git clone https://github.com/jonesroot/Key-Userbot`
+ • `git clone https://github.com/KojiraReyyAnata/Key-Userbot`
 
  • `cd Key-Userbot`
 
@@ -97,7 +97,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 • Silakan isi vars yang diperlukan API_ID, API_HASH, SESSION, HEROKU_API dan HEROKU_APP_NAME
 
 <h3 align="center">Click The Button</h3>
-<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/jonesroot/Key-Userbot"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
+<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/KojiraReyyAnata/Key-Userbot"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
 </div>
 
 </details>

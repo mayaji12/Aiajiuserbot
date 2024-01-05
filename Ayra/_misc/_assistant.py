@@ -31,7 +31,7 @@ IN_BTTS = [
     [
         Button.url(
             "Repository",
-            url="https://github.com/jonesroot/Key-Userbot",
+            url="https://github.com/KojiraReyyAnata/Key-Userbot",
         ),
         Button.url("Support", url="https://t.me/keysupport1"),
     ]
