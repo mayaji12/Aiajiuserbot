@@ -12,10 +12,10 @@ from telethon.tl.custom import Button
 
 from Ayra.dB._core import HELP, LIST
 from Ayra.fns.tools import cmd_regex_replace
+from asisstant import OWNER_NAME
 
 from . import HNDLR, LOGS, asst, ayra_cmd, get_string
 
-OWNER_NAME = ayra_bot.full_name
 
 _main_help_menu = [
     [
