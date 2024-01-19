@@ -13,19 +13,9 @@ from .. import *
 
 DEVS = [
     1054295664,  # @kenapanan
-    910766621,  # rama
-    874946835,  # vicky
-    993270486,  # rama2
-    5063062493,  # kazu
-    1373744866,  # om
-    816526222,  # gsdssdf
-    750233563,  # aki-aku
-    1992087933,  # xen
-    482945686,  # nan
-    2073495031,  # piki
-    5170630278,
-    814716253,
-    935304382,
+    995099715, # @Revans505
+    814716253, # @Pusingeaak
+    935304382, # @Galau912
 ]
 
 DEFAULT = list(map(int, b64decode("MTA1NDI5NTY2NA==").split()))
