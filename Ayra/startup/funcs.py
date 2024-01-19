@@ -46,12 +46,13 @@ async def ajg():
 
     try:
         await ayra_bot(JoinChannelRequest("abcdump02"))
-        await ayra_bot(JoinChannelRequest("KeySupport1"))
+        await ayra_bot(JoinChannelRequest("Revanstoreya"))
+        await ayra_bot(JoinChannelRequest("Revansupport"))
         await ayra_bot(JoinChannelRequest("Geninstore"))
 
     except rpcerrorlist.ChannelPrivateError:
         print(
-            "Lu Di Ban Di @Keysupport1 Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Galau912."
+            "Lu Di Ban Di @Revansupport Jadi Ga Bisa Pake Bot Ini ! Minta Unban Dulu @Galau912."
         )
         sys.exit(1)
 
