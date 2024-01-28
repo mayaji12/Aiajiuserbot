@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://telegra.ph//file/8675e75ef634fce0b8102.jpg">
+  <img src="https://telegra.ph//file/643d8d49eec914aea0701.jpg">
 </p>
 <h1 align="center">
-  <b>Key - Userbot</b>
+  <b>Revans - Userbot</b>
 </h1>
 
 <b>A stable pluggable Telegram userbot + Voice & Video Call music bot, based on Telethon and Pyrogram</b>
 
-<a href="https://github.com/KojiraReyyAnata/Key-Userbot/commits"> <img src="https://img.shields.io/github/last-commit/KojiraReyyAnata/Key-Userbot?color=red&logo=github&logoColor=blue&style=for-the-badge" /></a>
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/KojiraReyyAnata/Key-Userbot)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/KojiraReyyAnata/Key-Userbot/graphs/commit-activity)
-[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/KojiraReyyAnata/Key-Userbot/dashboard)
+<a href="https://github.com/Rehansaputradewantoro/Rehan-Userbott/commits"> <img src="https://img.shields.io/github/last-commit/Rehansaputradewantoro/Rehan-Userbott?color=red&logo=github&logoColor=blue&style=for-the-badge" /></a>
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/Rehansaputradewantoro/Rehan-Userbott)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-blue)](https://GitHub.com/Rehansaputradewantoro/Rehan-Userbott/graphs/commit-activity)
+[![CodeQuality](https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=blue&logo=codacy)](https://app.codacy.com/gh/Rehansaputradewantoro/Rehan-Userbott/dashboard)
 [![GitHub Forks](https://img.shields.io/github/forks/KojiraReyyAnata/Key-Userbot?&logo=github)](https://github.com/KojiraReyyAnata/Key-Userbot/fork)
-[![GitHub Stars](https://img.shields.io/github/stars/KojiraReyyAnata/Key-Userbot?&logo=github)](https://github.com/KojiraReyyAnata/Key-Userbot/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/Rehansaputradewantoro/Rehan-Userbott?&logo=github)](https://github.com/Rehansaputradewantoro/Rehan-Userbott/stargazers)
 ----
 
 ## Disclaimer
@@ -64,7 +64,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
   - ketik ctrl + S
   - ctrl + X
 
- • `screen -S key`
+ • `screen -S rehan`
 
  • `bash start`
 
@@ -74,9 +74,9 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 <summary><b>🔗 Deploy Via Docker</b></summary>
 <br>
 
- • `git clone https://github.com/KojiraReyyAnata/Key-Userbot`
+ • `git clone https://github.com/Rehansaputradewantoro/Rehan-Userbot`
 
- • `cd Key-Userbot`
+ • `cd Rehan-Userbot`
 
  • `nano .env`
   - Jika anda menggunakan mongodb maka isi pada .env MONGO_URI tetapi jika anda menggunakan redis maka isi REDIS_URI dan REDIS_PASSWORD
@@ -85,9 +85,9 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
   - ketik ctrl + S
   - ctrl + X
 
- • `docker build . -t key`
+ • `docker build . -t han`
 
- • `docker run --name key --env-file .env key`
+ • `docker run --name han --env-file .env han`
 
 </details>
 
@@ -97,7 +97,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 • Silakan isi vars yang diperlukan API_ID, API_HASH, SESSION, HEROKU_API dan HEROKU_APP_NAME
 
 <h3 align="center">Click The Button</h3>
-<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/KojiraReyyAnata/Key-Userbot"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
+<a align="center" href="https://dashboard.heroku.com/new?template=https://github.com/Rehansaputradewantoro/Rehan-Userbott"><img src="https://www.herokucdn.com/deploy/button.svg"></a>
 </div>
 
 </details>
@@ -107,7 +107,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan userbot ini dengan bijak
 
 # License
 [![License](https://www.gnu.org/graphics/agplv3-155x51.png)](LICENSE)   
-Key-Userbot is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
+Rehan-Userbott is licensed under [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) v3 or later.
 
 ---
 
