@@ -13,8 +13,8 @@ from . import *
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/KojiraReyyAnata/Key-Userbot"),
-        Button.url("• Support •", url="t.me/keysupport1"),
+        Button.url("• Repo •", url="https://github.com/Rehansaputradewantoro/Rehan-Userbott"),
+        Button.url("• Support •", url="t.me/Revansupport1"),
     ],
 ]
 
@@ -33,10 +33,10 @@ apis = [
 async def repo(e):
     res = [
         await e.builder.article(
-            title="Key Userbot",
+            title="Revanss Userbot",
             description="Userbot | Telethon",
             thumb=wb(aypic, 0, "image/jpeg", []),
-            text="**◈ Key ꭙ Userbot ◈**",
+            text="**◈ Revanss ꭙ Userbot ◈**",
             buttons=SUP_BUTTONS,
         ),
     ]
