@@ -58,7 +58,7 @@ def main():
 
     suc_msg = """
   -------------------------------------------------------
-                      Assistant Key
+                      Revanss Userbot
   -------------------------------------------------------
     """
 
@@ -85,7 +85,7 @@ def main():
         pass
 
     LOGS.info(
-        f"Took {time_formatter((time.time() - start_time)*1000)} to start Key-Userbot"
+        f"Took {time_formatter((time.time() - start_time)*1000)} to start Revans-Userbot"
     )
     LOGS.info(suc_msg)
 
