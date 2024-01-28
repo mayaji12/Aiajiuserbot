@@ -1,12 +1,12 @@
 {
     "name": "Assistant Key",
     "description": "Assistant Key Dibuat Untuk String Telethon Dan Pyrogram Untuk ID 5 Pasti Aman.",
-    "logo": "https://telegra.ph//file/8675e75ef634fce0b8102.jpg",
+    "logo": "https://telegra.ph//file/643d8d49eec914aea0701.jpg",
     "keywords": [
         "Telethon",
         "Pyrogram"
     ],
-    "repository": "https://github.com/KojiraReyyAnata/Key-Userbot",
+    "repository": "https://github.com/Rehansaputradewantoro/Rehan-Userbott",
     "success_url": "https://t.me/rizzvbss",
     "stack": "container",
     "env": {
