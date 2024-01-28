@@ -244,8 +244,8 @@ async def autopilot():
         try:
             r = await ayra_bot(
                 CreateChannelRequest(
-                    title="Key-Userbot Logs",
-                    about="Ini adalah grup logs dari Key-Userbot\nJangan keluar dari grup logs ini\n\n",
+                    title="Revans-Userbot Logs",
+                    about="Ini adalah grup logs dari Revans-Userbot\nJangan keluar dari grup logs ini\n\n",
                     megagroup=True,
                 ),
             )
@@ -313,7 +313,7 @@ async def autopilot():
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo = await download_file(
-            "https://telegra.ph//file/8675e75ef634fce0b8102.jpg", "logo.jpg"
+            "https://telegra.ph//file/643d8d49eec914aea0701.jpg", "logo.jpg"
         )
         ll = await ayra_bot.upload_file(photo)
         try:
@@ -342,7 +342,7 @@ async def customize():
             sir = f"@{ayra_bot.me.username}"
         file = random.choice(
             [
-                "https://telegra.ph//file/8675e75ef634fce0b8102.jpg",
+                "https://telegra.ph//file/643d8d49eec914aea0701.jpg",
                 "resources/extras/logo.jpg",
             ]
         )
@@ -379,7 +379,7 @@ async def customize():
         await asyncio.sleep(1)
         await ayra_bot.send_message(
             "botfather",
-            f"✨ Powerful Key-Userbot Assistant  ✨\n✨ Master ~ {sir} ✨\n\n✨ Powered By ~ @keysupport1 ✨",
+            f"✨ Powerful Revans-Userbot Assistant  ✨\n✨ Master ~ {sir} ✨\n\n✨ Powered By ~ @Revansupport ✨",
         )
         await asyncio.sleep(2)
         await msg.edit("Completed **Auto Customisation** at @BotFather.")
@@ -420,7 +420,7 @@ async def plug(plugin_channels):
                 try:
                     load_addons(plugin)
                 except Exception as e:
-                    LOGS.info(f"Key-Userbot - PLUGIN_CHANNEL - ERROR - {plugin}")
+                    LOGS.info(f"Revans-Userbot - PLUGIN_CHANNEL - ERROR - {plugin}")
                     LOGS.exception(e)
                     os.remove(plugin)
         except Exception as er:
@@ -436,13 +436,13 @@ async def ready():
     chat_id = udB.get_key("LOG_CHANNEL")
     spam_sent = None
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
-        MSG = """ **Thanks for Deploying Key-Userbot!**
+        MSG = """ **Thanks for Deploying Revans-Userbot!**
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
-        PHOTO = "https://telegra.ph//file/8675e75ef634fce0b8102.jpg"
+        PHOTO = "https://telegra.ph//file/643d8d49eec914aea0701.jpg"
         BTTS = Button.inline("• Click to Start •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Done")
     else:
-        MSG = f"**Key-Userbot has been deployed!**\n╼┅━━━━━━━━━━━┅╾\n**UserMode**: {inline_mention(ayra_bot.me)}\n**Assistant**: @{asst.me.username}\n╼┅━━━━━━━━━━━┅╾\n**Support**: @keysupport1\n╼┅━━━━━━━━━━━┅╾"
+        MSG = f"**Revans-Userbot has been deployed!**\n╼┅━━━━━━━━━━━┅╾\n**UserMode**: {inline_mention(ayra_bot.me)}\n**Assistant**: @{asst.me.username}\n╼┅━━━━━━━━━━━┅╾\n**Support**: @keysupport1\n╼┅━━━━━━━━━━━┅╾"
         BTTS, PHOTO = None, None
         prev_spam = udB.get_key("LAST_UPDATE_LOG_SPAM")
         if prev_spam:
